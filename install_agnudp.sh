@@ -13,19 +13,19 @@ set -e
 ###
 
 # Domain Name
-DOMAIN="vpn.khaledagn.com"
+DOMAIN="udp.vpsjenken07.xyz"
 
 # PROTOCOL
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":36712"
+UDP_PORT=":5666"
 
 # OBFS
-OBFS="agnudp"
+OBFS="Jenken123"
 
 # PASSWORDS
-PASSWORD="agnudp"
+PASSWORD="JenkenCode:JenkenCode"
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
@@ -337,31 +337,7 @@ check_environment_architecture() {
 		return
 		fi
 		
-		case "$(uname -m)" in
-		'i386' | 'i686')
-		ARCHITECTURE='386'
-		;;
-	'amd64' | 'x86_64')
-	ARCHITECTURE='amd64'
-	;;
-	'armv5tel' | 'armv6l' | 'armv7' | 'armv7l')
-	ARCHITECTURE='arm'
-	;;
-	'armv8' | 'aarch64')
-	ARCHITECTURE='arm64'
-	;;
-	'mips' | 'mipsle' | 'mips64' | 'mips64le')
-	ARCHITECTURE='mipsle'
-	;;
-	's390x')
-	ARCHITECTURE='s390x'
-	;;
-	*)
-	error "The architecture '$(uname -a)' is not supported."
-	note "Specify ARCHITECTURE=<architecture> to bypass this check and force this script running on this $(uname -m)."
-	exit 8
-	;;
-	esac
+		wget https://github.com/zahidbd2/udp-zivpn/releases/download/udp-zivpn_1.4.9/udp-zivpn-linux-amd64 -O /usr/local/bin/zivpn 1> /dev/null 2> /dev/null
 }
 
 check_environment_systemd() {
@@ -668,15 +644,15 @@ tpl_hysteria_server_x_service() {
 tpl_etc_hysteria_config_json() {
   cat << EOF
 {
-  "server": "vpn.khaledagn.com",
+  "server": "udp.vpsjenken07.xyz",
    "listen": "$UDP_PORT",
   "protocol": "$PROTOCOL",
   "cert": "/etc/hysteria/hysteria.server.crt",
   "key": "/etc/hysteria/hysteria.server.key",
-  "up": "100 Mbps",
-  "up_mbps": 100,
-  "down": "100 Mbps",
-  "down_mbps": 100,
+  "up": "1 Mbps",
+  "up_mbps": 1,
+  "down": "1 Mbps",
+  "down_mbps": 1,
   "disable_udp": false,
   "obfs": "$OBFS",
   "auth": {
