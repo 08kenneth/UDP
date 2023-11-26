@@ -13,19 +13,19 @@ set -e
 ###
 
 # Domain Name
-DOMAIN="vpn.khaledagn.com"
+DOMAIN="udp.vpsjenken07.xyz"
 
 # PROTOCOL
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":36712"
+UDP_PORT=":5666"
 
 # OBFS
-OBFS="agnudp"
+OBFS="Jenken123"
 
 # PASSWORDS
-PASSWORD="agnudp"
+PASSWORD="JenkenCode:JenkenCode"
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
@@ -668,15 +668,15 @@ tpl_hysteria_server_x_service() {
 tpl_etc_hysteria_config_json() {
   cat << EOF
 {
-  "server": "vpn.khaledagn.com",
+  "server": "udp.vpsjenken07.xyz",
    "listen": "$UDP_PORT",
   "protocol": "$PROTOCOL",
   "cert": "/etc/hysteria/hysteria.server.crt",
   "key": "/etc/hysteria/hysteria.server.key",
-  "up": "100 Mbps",
-  "up_mbps": 100,
-  "down": "100 Mbps",
-  "down_mbps": 100,
+  "up": "1 Mbps",
+  "up_mbps": 1,
+  "down": "1 Mbps",
+  "down_mbps": 1,
   "disable_udp": false,
   "obfs": "$OBFS",
   "auth": {
