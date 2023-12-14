@@ -25,7 +25,7 @@ UDP_PORT=":5666"
 OBFS="Jenken123"
 
 # PASSWORDS
-PASSWORD="JenkenCode:Jenkencode"
+PASSWORD="JenkenCode:JenkenCode"
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
