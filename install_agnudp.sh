@@ -13,19 +13,19 @@ set -e
 ###
 
 # Domain Name
-DOMAIN="vpn.khaledagn.com"
+DOMAIN="udp.vpsjenken07.xyz"
 
 # PROTOCOL
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":36712"
+UDP_PORT=":5666"
 
 # OBFS
-OBFS="agnudp"
+OBFS="Jenken123"
 
 # PASSWORDS
-PASSWORD="agnudp"
+PASSWORD="JenkenCode:Jenkencode"
 
 # Basename of this script
 SCRIPT_NAME="$(basename "$0")"
@@ -668,15 +668,15 @@ tpl_hysteria_server_x_service() {
 tpl_etc_hysteria_config_json() {
   cat << EOF
 {
-  "server": "vpn.khaledagn.com",
+  "server": "udp.vpsjenken07.xyz",
    "listen": "$UDP_PORT",
   "protocol": "$PROTOCOL",
   "cert": "/etc/hysteria/hysteria.server.crt",
   "key": "/etc/hysteria/hysteria.server.key",
-  "up": "100 Mbps",
-  "up_mbps": 100,
-  "down": "100 Mbps",
-  "down_mbps": 100,
+  "up": "1 Mbps",
+  "up_mbps": 1,
+  "down": "1 Mbps",
+  "down_mbps": 1,
   "disable_udp": false,
   "obfs": "$OBFS",
   "auth": {
@@ -940,8 +940,8 @@ start_services() {
 	sudo debconf-set-selections <<< "iptables-persistent iptables-persistent/autosave_v4 boolean true"
         sudo debconf-set-selections <<< "iptables-persistent iptables-persistent/autosave_v6 boolean true"
 	apt -y install iptables-persistent
-	iptables -t nat -A PREROUTING -i $(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1) -p udp --dport 10000:65000 -j DNAT --to-destination $UDP_PORT
-	ip6tables -t nat -A PREROUTING -i $(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1) -p udp --dport 10000:65000 -j DNAT --to-destination $UDP_PORT
+	iptables -t nat -A PREROUTING -i $(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1) -p udp --dport 20000:50000 -j DNAT --to-destination $UDP_PORT
+	ip6tables -t nat -A PREROUTING -i $(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1) -p udp --dport 20000:50000 -j DNAT --to-destination $UDP_PORT
 	sysctl net.ipv4.conf.all.rp_filter=0
 	sysctl net.ipv4.conf.$(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1).rp_filter=0 
 	echo "net.ipv4.ip_forward = 1
