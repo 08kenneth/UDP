@@ -22,7 +22,7 @@ PROTOCOL="udp"
 UDP_PORT=":5666"
 
 # OBFS
-OBFS="Jenken123"
+OBFS="zivpn"
 
 # PASSWORDS
 PASSWORD="JenkenCode:JenkenCode"
