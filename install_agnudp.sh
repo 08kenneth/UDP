@@ -8,7 +8,7 @@
 set -e
 
 # Domain Name
-DOMAIN="vpn.khaledagn.com"
+DOMAIN="user.jenkenvps.xyz"
 
 # PROTOCOL
 PROTOCOL="udp"
