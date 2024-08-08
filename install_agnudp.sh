@@ -14,7 +14,7 @@ DOMAIN="user.jenkenvps.xyz"
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":36712"
+UDP_PORT=":5666"
 
 # OBFS
 OBFS="agnudp"
