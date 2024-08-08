@@ -1,25 +1,41 @@
-![](https://github.com/powermx/dl/blob/master/zivpn.png)
+# AGN-UDP By KHALED AGN
 
-UDP server installation for ZIVPN Tunnel (SSH/DNS) VPN app.
-<br>
+THIS IS A SCRIPT FOR AUTO INSTALLATION OF UDP (HYSTERIA SERVER) 
 
->Server binary for Linux amd64.
 
-#### Installation
+
+# Client app AGN INJECTOR
+
+<p>
+<a href="https://play.google.com/store/apps/details?id=com.agn.injector"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="100"></a>
+</p>
+
+
+# Installation
+
+
+// Download the script
 ```
-wget -O zi.sh https://raw.githubusercontent.com/zahidbd2/udp-zivpn/main/zi.sh; sudo chmod +x zi.sh; sudo ./zi.sh
+wget https://github.com/khaledagn/AGN-UDP/raw/main/install_agnudp.sh
+```
+// Edit script configuration 
+```
+nano install_agnudp.sh
+```
+// Install the script
+```
+chmod +x install_agnudp.sh; ./install_agnudp.sh
 ```
 
-### Uninstall
+## :octocat: by KHALED AGN
+<ul>
+ <li>TELEGRAM CHANNEL: https://t.me/khaledagn</li>
+ <li>FACEBOOK: https://www.facebook.com/itskhaledagn</li>
+ <li>INSTAGRAM: https://www.instagram.com/khaledagn</li>
+ <li>TWITTER: https://www.twitter.com/khaled_agn</li>
+ 
+ </ul>
+ 
+## :octocat: Credits
 
-```
-sudo wget -O ziun.sh https://raw.githubusercontent.com/zahidbd2/udp-zivpn/main/uninstall.sh; sudo chmod +x ziun.sh; sudo ./ziun.sh
-```
-
-Client App available:
-
-<a href="https://play.google.com/store/apps/details?id=com.zi.zivpn" target="_blank" rel="noreferrer">Download APP on Playstore</a>
-> ZiVPN
-                
-----
-Bash script by PowerMX
+1. [@apernet )
