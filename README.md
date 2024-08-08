@@ -26,7 +26,10 @@ nano install_agnudp.sh
 ```
 chmod +x install_agnudp.sh; ./install_agnudp.sh
 ```
-
+// Edit config.json
+```
+nano /etc/hysteria/config.json
+```
 ## :octocat: by KHALED AGN
 <ul>
  <li>TELEGRAM CHANNEL: https://t.me/khaledagn</li>
