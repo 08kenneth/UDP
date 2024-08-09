@@ -14,7 +14,7 @@ DOMAIN="user.jenkenvps.xyz"
 PROTOCOL="udp"
 
 # UDP PORT
-UDP_PORT=":5666"
+UDP_PORT=":5667"
 
 # OBFS
 OBFS="agnudp"
@@ -785,8 +785,8 @@ start_services() {
     sudo debconf-set-selections <<< "iptables-persistent iptables-persistent/autosave_v4 boolean true"
     sudo debconf-set-selections <<< "iptables-persistent iptables-persistent/autosave_v6 boolean true"
     apt -y install iptables-persistent
-    iptables -t nat -A PREROUTING -i $(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1) -p udp --dport 30000:60000 -j DNAT --to-destination $UDP_PORT
-    ip6tables -t nat -A PREROUTING -i $(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1) -p udp --dport 30000:60000 -j DNAT --to-destination $UDP_PORT
+    iptables -t nat -A PREROUTING -i $(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1) -p udp --dport 20000:50000 -j DNAT --to-destination $UDP_PORT
+    ip6tables -t nat -A PREROUTING -i $(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1) -p udp --dport 20000:50000 -j DNAT --to-destination $UDP_PORT
     sysctl net.ipv4.conf.all.rp_filter=0
     sysctl net.ipv4.conf.$(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1).rp_filter=0
     echo "net.ipv4.ip_forward = 1
