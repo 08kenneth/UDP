@@ -495,12 +495,6 @@ tpl_etc_hysteria_config_json() {
   "protocol": "$PROTOCOL",
   "cert": "/etc/hysteria/hysteria.server.crt",
   "key": "/etc/hysteria/hysteria.server.key",
-  "up": "100 Mbps",
-  "up_mbps": 100,
-  "down": "100 Mbps",
-  "down_mbps": 100,
-  "disable_udp": false,
-  "insecure": false,
   "obfs": "$OBFS",
   "auth": {
  	"mode": "passwords",
